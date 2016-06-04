@@ -1,6 +1,6 @@
 # Demo-ng
 
-A demo front-end architecture with Angular 1.x and Webpack using ES2015.
+A demo front-end architecture with Angular 1.x and ES2015 using Webpack.
 
 
 ### Preparation
@@ -10,7 +10,7 @@ npm install
 ```
 
 ### Run
-Suppose you have installed NodeJS
+Suppose you have installed NodeJS.
 
 ```
 npm start
