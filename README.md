@@ -10,7 +10,7 @@ npm install
 ```
 
 ### Run
-(Suppose you have installed NodeJS)
+Suppose you have installed NodeJS
 
 ```
 npm start

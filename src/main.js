@@ -3,7 +3,7 @@ import HomeController from 'js/home';
 import NavBarDirective from 'js/directive/nav-bar';
 import 'less/main.less';
 
-angular.module('gnome', [uiRouter])
+angular.module('demo', [uiRouter])
 .config(($stateProvider, $urlRouterProvider) => {
   $stateProvider
     .state('home', {
