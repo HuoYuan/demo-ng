@@ -1,9 +1,8 @@
-import uiRouter from 'angular-ui-router';
 import HomeController from 'js/home';
 import NavBarDirective from 'js/directive/nav-bar';
 import 'less/main.less';
 
-angular.module('demo', [uiRouter])
+angular.module('demo', ['ui.router'])
 .config(($stateProvider, $urlRouterProvider) => {
   $stateProvider
     .state('home', {
