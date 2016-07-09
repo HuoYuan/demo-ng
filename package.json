@@ -24,7 +24,11 @@
   "homepage": "https://github.com/HuoYuan/demo-ng#readme",
   "devDependencies": {
     "angular": "^1.5.5",
-    "angular-ui-router": "^0.3.0",
+    "angular-ui-router": "^0.3.0"
+  },
+  "dependencies": {
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",

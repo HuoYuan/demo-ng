@@ -1,5 +1,4 @@
 import HomeController from 'js/home';
-import NavBarDirective from 'js/directive/nav-bar';
 import 'less/main.less';
 
 angular.module('demo', ['ui.router'])
@@ -12,5 +11,4 @@ angular.module('demo', ['ui.router'])
     });
   $urlRouterProvider.otherwise('/home');
 })
-.controller('HomeController', HomeController)
-.directive('navBar', () => new NavBarDirective);
+.controller('HomeController', HomeController);
