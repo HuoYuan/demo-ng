@@ -16,6 +16,26 @@
   "parser": "babel-eslint",
   "rules": {
     "strict": 0,
-    "no-param-reassign": 0
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "no-unused-vars": 0,
+    "quote-props": 0,
+    "max-len": ["error", 250],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "angular/document-service": 0,
+    "angular/log": 0,
+    "angular/no-service-method": 0,
+    "angular/module-getter": 0,
+    "angular/angularelement": 0,
+    "angular/window-service": 0,
+  },
+  "globals": {
+    "echarts": true,
+    "Swiper": true,
+    "BMap": true,
+    "moment": true,
+    "wx": true,
+    "$": true,
+    'FastClick': true
   }
 }
