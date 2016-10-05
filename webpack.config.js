@@ -1,16 +1,15 @@
 var path = require('path');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var webpack = require('webpack');
-var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
-// var deps = [
-//   'angular/angular.min.js'
-// ];
+var fs = require('fs');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 var config = {
   entry: './src/main.js',
   devtool: 'source-map',
   output: {
-    path: './dist',
-    filename: 'base.bundle.js',
+    path: path.join(__dirname, 'dist'),
+    filename: 'base.[hash].bundle.js',
     publicPath: '/',
   },
   module: {
@@ -25,13 +24,13 @@ var config = {
     }]
   },
   plugins: [
-    new ngAnnotatePlugin({
-      add: true
-    })
+    new HtmlWebpackPlugin({
+      filename: '../index.html',
+      template: 'index.ejs',
+      inject: false,
+    }),
   ],
-  postcss: function() {
-    return [require('autoprefixer'), require('precss')];
-  },
+  postcss: [ autoprefixer({ browsers: ['last 2 versions', 'iOS 8', 'Android 4.2'] }) ],
   resolve: {
     alias: {},
     modulesDirectories: [
@@ -44,11 +43,5 @@ var config = {
     extensions: ['', '.json', '.js']
   }
 }
-
-// deps.forEach(function (dep) {
-//   var depPath = path.resolve(node_modules_dir, dep);
-//   config.resolve.alias[dep.split(path.sep)[0]] = depPath;
-//   config.module.noParse.push(depPath);
-// });
 
 module.exports = config;

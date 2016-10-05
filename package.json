@@ -4,7 +4,8 @@
   "description": "A demo front-end architecture with Angular 1.x and Webpack using ES2015",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "clean": "rimraf dist",
+    "build": "npm run clean & webpack",
     "watch": "webpack -w",
     "server": "node server.js",
     "start": "npm run watch & npm run server"
@@ -23,12 +24,6 @@
   },
   "homepage": "https://github.com/HuoYuan/demo-ng#readme",
   "devDependencies": {
-    "angular": "^1.5.5",
-    "angular-ui-router": "^0.3.0"
-  },
-  "dependencies": {
-    "eslint-plugin-jsx-a11y": "^1.5.5",
-    "eslint-plugin-react": "^5.2.2",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",
@@ -42,15 +37,22 @@
     "eslint-import-resolver-webpack": "^0.2.4",
     "eslint-plugin-angular": "^1.0.1",
     "eslint-plugin-import": "^1.8.0",
-    "express": "^4.13.4",
-    "less": "^2.7.1",
-    "path": "^0.12.7",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
+    "html-webpack-plugin": "^2.22.0",
     "less-loader": "^2.2.3",
     "ng-annotate-loader": "^0.1.0",
     "ng-annotate-webpack-plugin": "^0.1.2",
+    "path": "^0.12.7",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "express": "^4.13.4",
+    "less": "^2.7.1"
   }
 }

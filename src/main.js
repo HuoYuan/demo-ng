@@ -1,7 +1,8 @@
-import HomeController from 'js/home';
+import ControllersModule from 'js/controllers';
+import ServicesModule from 'js/services';
 import 'less/main.less';
 
-angular.module('demo', ['ui.router'])
+angular.module('demo', ['ui.router', ControllersModule, ServicesModule])
 .config(($stateProvider, $urlRouterProvider) => {
   $stateProvider
     .state('home', {
@@ -10,5 +11,4 @@ angular.module('demo', ['ui.router'])
       controller: 'HomeController as Home',
     });
   $urlRouterProvider.otherwise('/home');
-})
-.controller('HomeController', HomeController);
+});

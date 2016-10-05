@@ -6,13 +6,25 @@
   font-family: OpenSans-Light,PingFang SC,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
   box-sizing: border-box;
   font-weight: 300;
-  font-size: 12px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
   height: 100%;
 }
 
-.inner-wrapper {
-  margin-top: 100px;
+input, select {
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  &:focus, &:active, &:hover {
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
 }
