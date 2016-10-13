@@ -7,6 +7,7 @@ A demo front-end architecture with Angular 1.x and ES2015 using Webpack.
 
 ```
 npm install
+ln -s ../../pre-commit.sh .git/hooks/pre-commit
 ```
 
 ### Run

@@ -24,7 +24,7 @@
     "quote-props": 0,
     "no-loop-func": 0,
     "max-len": ["error", 250],
-    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "no-underscore-dangle": 0,
     "angular/document-service": 0,
     "angular/log": 0,
     "angular/no-service-method": 0,
@@ -35,7 +35,7 @@
     "angular/timeout-service": 0,
     "angular/on-watch": 0,
     "angular/interval-service": 0,
-    "eqeqeq": 0,
+    "eqeqeq": 0
   },
   "globals": {
     "SockJS": true,
@@ -47,8 +47,11 @@
     "moment": true,
     "wx": true,
     "$": true,
+    "FastClick": true,
+    "pingpp": true,
     "WebUploader": true,
     "store": true,
-    "ENVIRONMENT": true,
+    "ENVIRONMENT": true
   }
 }
+

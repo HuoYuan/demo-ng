@@ -8,7 +8,8 @@
     "build": "npm run clean & webpack",
     "watch": "webpack -w",
     "server": "node server.js",
-    "start": "npm run watch & npm run server"
+    "start": "npm run watch & npm run server",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
