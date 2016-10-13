@@ -1,12 +1,11 @@
 var path = require('path');
-var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var webpack = require('webpack');
-var fs = require('fs');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer');
+var environment = process.env.NODE_ENV || 'development';
+console.log("Current environment is " + environment);
 var config = {
   entry: './src/main.js',
-  devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'base.[hash].bundle.js',
@@ -20,7 +19,7 @@ var config = {
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'ng-annotate!babel'
+      loader: 'babel'
     }]
   },
   plugins: [
@@ -42,6 +41,21 @@ var config = {
     },
     extensions: ['', '.json', '.js']
   }
+}
+
+if (environment === 'production') {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      },
+      mangle: false,
+    })
+  );
+}
+
+if (environment === 'development') {
+  config.devtool = 'source-map';
 }
 
 module.exports = config;

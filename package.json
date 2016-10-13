@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean & webpack",
+    "build": "npm run clean & NODE_ENV=production webpack",
     "watch": "webpack -w",
     "server": "node server.js",
     "start": "npm run watch & npm run server",
