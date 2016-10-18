@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var environment = process.env.NODE_ENV || 'development';
 console.log("Current environment is " + environment);
@@ -23,6 +24,10 @@ var config = {
     }]
   },
   plugins: [
+    new ngAnnotatePlugin({
+      add: true,
+      // other ng-annotate options here
+    }),
     new HtmlWebpackPlugin({
       filename: '../index.html',
       template: 'index.ejs',
@@ -49,7 +54,6 @@ if (environment === 'production') {
       compress: {
         warnings: false
       },
-      mangle: false,
     })
   );
 }

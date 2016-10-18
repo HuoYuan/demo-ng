@@ -1,4 +1,5 @@
-const UserService = ($http, $q, $resource) => {
+export default ($http, $q, $resource) => {
+  'ngInject';
   const Service = {
     getInfo: () => {
       const deferred = $q.defer();
@@ -8,5 +9,3 @@ const UserService = ($http, $q, $resource) => {
   };
   return Service;
 };
-
-export default UserService;
