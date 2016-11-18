@@ -6,7 +6,7 @@
 # it wants to stop the commit.
 #
 # To enable this hook, rename this file to "pre-commit".
-
+export PATH=/usr/local/Cellar/node/0.10.32/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:$PATH;
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 echo "Before your committing, lint your codes firstly.";
